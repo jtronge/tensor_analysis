@@ -1,0 +1,6 @@
+[submodule "FeaTensor"]
+	path = FeaTensor
+	url = git@github.com:jtronge/FeaTensor.git
+[submodule "GenTensor"]
+	path = GenTensor
+	url = git@github.com:jtronge/GenTensor.git
