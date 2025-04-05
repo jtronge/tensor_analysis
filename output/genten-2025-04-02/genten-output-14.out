@@ -1,0 +1,29 @@
+---------------------------------------
+Begin Slurm Prolog: Apr-04-2025 15:44:11
+Job ID:    3530520
+User ID:   jtronge3
+Account:   gts-rvuduc3
+Job name:  batch-14.sh
+Partition: cpu-small
+QOS:       embers
+---------------------------------------
+## options:
+dims=[26214400, 26214400, 26214400]
+density=1e-07
+fiber_density=4e-07
+## end options
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: error: *** JOB 3530520 ON atl1-1-03-002-10-1 CANCELLED AT 2025-04-04T16:44:28 DUE TO TIME LIMIT ***
+slurmstepd: error: *** STEP 3530520.0 ON atl1-1-03-002-10-1 CANCELLED AT 2025-04-04T16:44:28 DUE TO TIME LIMIT ***
+---------------------------------------
+Begin Slurm Epilog: Apr-04-2025 16:44:31
+Job ID:        3530520
+User ID:       jtronge3
+Account:       gts-rvuduc3
+Job name:      batch-14.sh
+Resources:     cpu=24,mem=376808M,node=1
+Rsrc Used:     cput=1-00:06:48,vmem=0,walltime=01:00:17,mem=9648K,energy_used=0
+Partition:     cpu-small
+QOS:           embers
+Nodes:         atl1-1-03-002-10-1
+---------------------------------------

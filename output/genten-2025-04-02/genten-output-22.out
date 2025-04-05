@@ -1,0 +1,28 @@
+---------------------------------------
+Begin Slurm Prolog: Apr-04-2025 15:52:24
+Job ID:    3530529
+User ID:   jtronge3
+Account:   gts-rvuduc3
+Job name:  batch-22.sh
+Partition: cpu-small
+QOS:       embers
+---------------------------------------
+## options:
+dims=[26214400, 26214400, 26214400]
+density=1e-11
+fiber_density=4e-11
+## end options
+slurmstepd: error: *** STEP 3530529.0 ON atl1-1-02-014-17-1 CANCELLED AT 2025-04-04T16:52:28 DUE TO TIME LIMIT ***
+slurmstepd: error: *** JOB 3530529 ON atl1-1-02-014-17-1 CANCELLED AT 2025-04-04T16:52:28 DUE TO TIME LIMIT ***
+---------------------------------------
+Begin Slurm Epilog: Apr-04-2025 16:52:34
+Job ID:        3530529
+User ID:       jtronge3
+Account:       gts-rvuduc3
+Job name:      batch-22.sh
+Resources:     cpu=24,mem=182808M,node=1
+Rsrc Used:     cput=1-00:02:00,vmem=0,walltime=01:00:05,mem=11300K,energy_used=0
+Partition:     cpu-small
+QOS:           embers
+Nodes:         atl1-1-02-014-17-1
+---------------------------------------

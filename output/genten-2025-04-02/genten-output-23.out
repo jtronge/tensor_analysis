@@ -1,0 +1,31 @@
+---------------------------------------
+Begin Slurm Prolog: Apr-04-2025 15:52:59
+Job ID:    3530530
+User ID:   jtronge3
+Account:   gts-rvuduc3
+Job name:  batch-23.sh
+Partition: cpu-small
+QOS:       embers
+---------------------------------------
+## options:
+dims=[209715200, 209715200, 209715200]
+density=1e-11
+fiber_density=4e-11
+## end options
+Command terminated by signal 9
+34334.21user 185.96system 24:23.97elapsed 2357%CPU (0avgtext+0avgdata 186814236maxresident)k
+0inputs+0outputs (45major+37524592minor)pagefaults 0swaps
+slurmstepd: error: Detected 1 oom_kill event in StepId=3530530.0. Some of the step tasks have been OOM Killed.
+srun: error: atl1-1-02-009-28-1: task 0: Out Of Memory
+---------------------------------------
+Begin Slurm Epilog: Apr-04-2025 16:17:24
+Job ID:        3530530
+User ID:       jtronge3
+Account:       gts-rvuduc3
+Job name:      batch-23.sh
+Resources:     cpu=24,mem=182808M,node=1
+Rsrc Used:     cput=09:46:00,vmem=0,walltime=00:24:25,mem=11312K,energy_used=0
+Partition:     cpu-small
+QOS:           embers
+Nodes:         atl1-1-02-009-28-1
+---------------------------------------

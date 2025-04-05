@@ -1,0 +1,29 @@
+---------------------------------------
+Begin Slurm Prolog: Apr-04-2025 15:41:30
+Job ID:    3530515
+User ID:   jtronge3
+Account:   gts-rvuduc3
+Job name:  batch-0.sh
+Partition: cpu-small
+QOS:       embers
+---------------------------------------
+## options:
+dims=[100, 100, 100]
+density=0.1
+fiber_density=0.4
+## end options
+/storage/home/hcoda1/3/jtronge3/scratch/genten-tests/sample-0.tns 	 1 	 3 	 100 	 100 	 100 	 1 	 nz_slc_cnt 	 100 	 100 	 density_slc 	 1 	 1 	 1 	 distr_type 	 2 	 max_fib_per_slc 	 100 	 63 	 0.63 	 imbal_fib_per_slc 	 -1 	 0.939058 	 -0.939058 	 std_fib_per_slc 	 20 	 9.56817 	 0.478409 	 cv_fib_per_slc 	 0.5 	 0.294496 	 0.588992 	 avg_fib_per_slc 	 40 	 32.49 	 0.81225 	 nz_fib_cnt 	 4000 	 3249 	 density_fib 	 0.4 	 0.3249 	 1.155 	 0.81225 	 distr_type 	 2 	 max_nz_per_fib 	 100 	 68 	 0.68 	 imbal_nz_per_fib 	 -1 	 1.63847 	 -1.63847 	 std_nz_per_fib 	 12.5 	 10.4393 	 0.835142 	 cv_nz_per_fib 	 0.5 	 0.405054 	 0.810108 	 avg_nz_per_fib 	 25 	 25.7725 	 1.0309 	 nnz 	 100000 	 83735 	 density 	 0.1 	 0.083735 	 0.99649 	 0.83735 	 24 	 TIME 	 0.0010346 	 0.0005390 	 0.0001818 	 0.0002049 	 0.0511708 	 0.0532332 
+0.18user 0.00system 0:00.05elapsed 336%CPU (0avgtext+0avgdata 4708maxresident)k
+0inputs+2088outputs (19major+602minor)pagefaults 0swaps
+ ---------------------------------------
+Begin Slurm Epilog: Apr-04-2025 15:41:30
+Job ID:        3530515
+User ID:       jtronge3
+Account:       gts-rvuduc3
+Job name:      batch-0.sh
+Resources:     cpu=24,mem=182808M,node=1
+Rsrc Used:     cput=00:00:24,vmem=0,walltime=00:00:01,mem=8740K,energy_used=0
+Partition:     cpu-small
+QOS:           embers
+Nodes:         atl1-1-02-007-16-2
+---------------------------------------
