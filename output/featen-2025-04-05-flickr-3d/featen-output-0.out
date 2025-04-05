@@ -1,0 +1,25 @@
+---------------------------------------
+Begin Slurm Prolog: Apr-05-2025 08:24:19
+Job ID:    3540589
+User ID:   jtronge3
+Account:   gts-rvuduc3
+Job name:  batch-0.sh
+Partition: cpu-small
+QOS:       embers
+---------------------------------------
+==> type=map
+==> start_time=1743855859
+ /storage/home/hcoda1/3/jtronge3/scratch/tensors/flickr-3d.tns (tensor) ||  3 (order) || 	 319686	 28153045	 1607191 (dim) ||  0 (extraction_method) ||  24 (max_threads) ||  27.8239064 (time_file_read) ||  66.5500300 (time_find_arrays) ||  10.0364178 (time_extract_final) ||  76.5866524 (time_extract_features_total) ||  
+==> end_time=1743855981
+---------------------------------------
+Begin Slurm Epilog: Apr-05-2025 08:26:21
+Job ID:        3540589
+User ID:       jtronge3
+Account:       gts-rvuduc3
+Job name:      batch-0.sh
+Resources:     cpu=24,mem=182808M,node=1
+Rsrc Used:     cput=00:49:12,vmem=0,walltime=00:02:03,mem=10568K,energy_used=0
+Partition:     cpu-small
+QOS:           embers
+Nodes:         atl1-1-02-007-2-2
+---------------------------------------
