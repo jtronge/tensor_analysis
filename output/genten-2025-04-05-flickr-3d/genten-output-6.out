@@ -1,0 +1,27 @@
+---------------------------------------
+Begin Slurm Prolog: Apr-05-2025 20:44:51
+Job ID:    3555247
+User ID:   jtronge3
+Account:   gts-rvuduc3
+Job name:  batch-6.sh
+Partition: cpu-small
+QOS:       embers
+---------------------------------------
+==> opts={"dims": [805558, 70941228, 4049867], "density": 7.80441e-12, "fiber_density": 2.81914e-06, "cv_fiber_per_slice": 5.24218, "cv_nnz_per_fiber": 1.04003}
+==> start_time=1743900291
+slurmstepd: error: *** STEP 3555247.0 ON atl1-1-02-007-5-2 CANCELLED AT 2025-04-05T21:44:52 ***
+srun: error: atl1-1-02-007-5-2: task 0: Terminated
+srun: Force Terminated StepId=3555247.0
+==> end_time=1743903892
+---------------------------------------
+Begin Slurm Epilog: Apr-05-2025 21:44:52
+Job ID:        3555247
+User ID:       jtronge3
+Account:       gts-rvuduc3
+Job name:      batch-6.sh
+Resources:     cpu=24,mem=182808M,node=1
+Rsrc Used:     cput=1-00:00:48,vmem=0,walltime=01:00:02,mem=11320K,energy_used=0
+Partition:     cpu-small
+QOS:           embers
+Nodes:         atl1-1-02-007-5-2
+---------------------------------------

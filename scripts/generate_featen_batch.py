@@ -37,6 +37,7 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     for i, type_ in enumerate(['map', 'sort', 'group', 'hybrid']):
+        os.makedirs(PROGRAM_OUTPUT_DIR, exist_ok=True)
         featen_output = os.path.join(PROGRAM_OUTPUT_DIR, f'featen-output-{i}.out')
         json_output = os.path.join(PROGRAM_OUTPUT_DIR, f'featen-output-{i}.json')
         with open(os.path.join(args.output, f'batch-{i}.sh'), 'w') as fp:

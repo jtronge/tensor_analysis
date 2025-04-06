@@ -1,0 +1,25 @@
+---------------------------------------
+Begin Slurm Prolog: Apr-05-2025 20:44:26
+Job ID:    3555241
+User ID:   jtronge3
+Account:   gts-rvuduc3
+Job name:  batch-0.sh
+Partition: cpu-small
+QOS:       embers
+---------------------------------------
+==> opts={"dims": [201389, 17735307, 1012466], "density": 7.80441e-12, "fiber_density": 2.81914e-06, "cv_fiber_per_slice": 5.24218, "cv_nnz_per_fiber": 1.04003}
+==> start_time=1743900266
+/storage/home/hcoda1/3/jtronge3/scratch/genten-tests-flickr-3d/sample-0.tns 	 1 	 3 	 201389 	 17735307 	 1012466 	 1 	 nz_slc_cnt 	 201389 	 201389 	 density_slc 	 1 	 1 	 1 	 distr_type 	 2 	 max_fib_per_slc 	 17735307 	 35133 	 0.00198096 	 imbal_fib_per_slc 	 -1 	 701.652 	 -701.652 	 std_fib_per_slc 	 262.1 	 255.494 	 0.974796 	 cv_fib_per_slc 	 5.24218 	 5.10983 	 0.974753 	 avg_fib_per_slc 	 49.9983 	 50.0006 	 1.00004 	 nz_fib_cnt 	 10069110 	 10069562 	 density_fib 	 2.81914e-06 	 2.81927e-06 	 1.06165 	 1.00004 	 distr_type 	 2 	 max_nz_per_fib 	 1012466 	 92 	 9.08672e-05 	 imbal_nz_per_fib 	 -1 	 31.981 	 -31.981 	 std_nz_per_fib 	 2.91508 	 2.098 	 0.719708 	 cv_nz_per_fib 	 1.04003 	 0.752111 	 0.723163 	 avg_nz_per_fib 	 2.80288 	 2.78948 	 0.995222 	 nnz 	 28222467 	 28088880 	 density 	 7.80441e-12 	 7.76747e-12 	 2.41836 	 0.995267 	 24 	 TIME 	 0.0011412 	 196.1571123 	 409.5741534 	 0.0108390 	 19.7865146 	 625.5576676 
+ ==> end_time=1743900892
+---------------------------------------
+Begin Slurm Epilog: Apr-05-2025 20:54:52
+Job ID:        3555241
+User ID:       jtronge3
+Account:       gts-rvuduc3
+Job name:      batch-0.sh
+Resources:     cpu=24,mem=182808M,node=1
+Rsrc Used:     cput=04:10:24,vmem=0,walltime=00:10:26,mem=11320K,energy_used=0
+Partition:     cpu-small
+QOS:           embers
+Nodes:         atl1-1-02-007-2-1
+---------------------------------------

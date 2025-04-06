@@ -4,3 +4,6 @@
 [submodule "GenTensor"]
 	path = GenTensor
 	url = git@github.com:jtronge/GenTensor.git
+[submodule "pgentensor"]
+	path = pgentensor
+	url = git@github.com:jtronge/pgentensor.git

@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+"""Process the JSON output from FeaTensor."""
 import argparse
 import json
 import pprint
@@ -22,15 +24,5 @@ if __name__ == '__main__':
     print('fiber_sparsity:', fiber_sparsity)
     slice_sparsity = base['slice_sparsity']
     print('slice_sparsity:', slice_sparsity)
-    #pprint.pprint(data)
-    #genten_args = ['./genten', '3']
-    #genten_args.extend([dim * args.factor for dim in dims])
-    ## Density (sparsity)
-    #genten_args.extend(['-d', sparsity])
-    ## Fiber sparsity
-    #genten_args.extend(['-f', fiber_sparsity])
-    ## Fiber sparsity
-    #genten_args.extend(['-s', slice_sparsity])
-    #genten_args.extend(['-o', args.output])
-    #genten_args = [str(arg) for arg in genten_args]
-    #print(' '.join(genten_args))
+    print('cv (slice):', [info['cv'] for info in data['slices']])
+    print('cv_onlynz (fibers):', [info['cv'] for info in data['fibers']])
