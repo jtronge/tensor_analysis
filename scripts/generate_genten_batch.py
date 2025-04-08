@@ -5,7 +5,7 @@ import json
 
 
 # Initial dimensions and densities/sparsities are based on FeaTensor output
-# for order 1 of the amazon-reviews tensor
+# for order 1 of the flickr-3d tensor
 OPTIONS = [
     {'dims': [int(319686 * scale**(1/3)), int(28153045 * scale**(1/3)),
               int(1607191 * scale**(1/3))],
