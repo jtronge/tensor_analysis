@@ -1,0 +1,26 @@
+---------------------------------------
+Begin Slurm Prolog: Apr-07-2025 16:34:13
+Job ID:    3593568
+User ID:   jtronge3
+Account:   gts-rvuduc3
+Job name:  batch-0.sh
+Partition: cpu-small
+QOS:       inferno
+---------------------------------------
+==> opts={"dims": [201389, 17735307, 1012466], "density": 7.80441e-12, "fiber_density": 2.81914e-06, "cv_fiber_per_slice": 5.24218, "cv_nnz_per_fiber": 1.04003}
+==> start_time=1744058053
+requested nonzero count: 28222467
+generated nonzero count: 2557436337
+==> end_time=1744059332
+---------------------------------------
+Begin Slurm Epilog: Apr-07-2025 16:55:32
+Job ID:        3593568
+User ID:       jtronge3
+Account:       gts-rvuduc3
+Job name:      batch-0.sh
+Resources:     cpu=24,mem=182808M,node=1
+Rsrc Used:     cput=08:32:00,vmem=0,walltime=00:21:20,mem=72439944K,energy_used=0
+Partition:     cpu-small
+QOS:           inferno
+Nodes:         atl1-1-02-010-18-2
+---------------------------------------

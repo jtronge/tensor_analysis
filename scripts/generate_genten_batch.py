@@ -4,11 +4,8 @@ import os
 import json
 
 
-TENSOR_DIR = '~/scratch/genten-tests-flickr-3d'
-PROGRAM_OUTPUT_DIR = 'output/genten-2025-04-05-flickr-3d'
-
 # Initial dimensions and densities/sparsities are based on FeaTensor output
-# for order 1 of the flickr-3d tensor
+# for order 1 of the amazon-reviews tensor
 OPTIONS = [
     {'dims': [int(319686 * scale**(1/3)), int(28153045 * scale**(1/3)),
               int(1607191 * scale**(1/3))],
@@ -22,7 +19,7 @@ OPTIONS = [
 ]
 
 
-def genten_batch(opts, output_tensor, genten_output):
+def genten_batch(version, opts, output_tensor, genten_output):
     """Return a GenTensor batch script for the given options."""
     dims = opts['dims']
     dim_args = ' '.join(str(dim) for dim in dims)
@@ -40,13 +37,20 @@ def genten_batch(opts, output_tensor, genten_output):
     ]
     # Dump options
     body.append(f"printf '==> opts={json.dumps(opts)}'\"\\n\"")
-    # Create output directories
-    body.append(f'mkdir -p {PROGRAM_OUTPUT_DIR}')
-    body.append(f'mkdir -p {TENSOR_DIR}')
     # Add time commands to get a rough estimate of how much time it took
     body.append('printf "==> start_time=%s\\n" $(date +%s)')
     # Add the command
-    body.append(f'srun -N 1 -n 1 ./GenTensor/genten {len(dims)} {dim_args} -d {density} -f {fiber_density} -c {cv_fiber_per_slice} -v {cv_nnz_per_fiber} -s 1 -o {output_tensor}')
+    if version == 'gentensor':
+        body.append(f'./GenTensor/genten {len(dims)} {dim_args} -d {density} -f {fiber_density} -c {cv_fiber_per_slice} -v {cv_nnz_per_fiber} -s 1 -o {output_tensor}')
+    elif version == 'pgentensor':
+        dims = 'x'.join(str(dim) for dim in dims)
+        body.append(' '.join(['./pgentensor/target/release/pgentensor',
+                              f'--fname {output_tensor}',
+                              f'--dims {dims}',
+                              f'--density {density}',
+                              f'--fiber-density {fiber_density}',
+                              f'--cv-fiber-slice {cv_fiber_per_slice}',
+                              f'--cv-nonzero-fiber {cv_nnz_per_fiber}']))
     body.append('printf "==> end_time=%s\\n" $(date +%s)')
     body.append('')
     return '\n'.join(body)
@@ -54,14 +58,25 @@ def genten_batch(opts, output_tensor, genten_output):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('-o', '--output', required=True, help='output directory')
+    parser.add_argument('-o', '--output', required=True,
+                        help='output directory')
+    parser.add_argument('-p', '--program-output', required=True,
+                        help='program output directory')
+    parser.add_argument('-t', '--tensor_dir', required=True,
+                        help='tensor output directory')
+    parser.add_argument('-v', '--version', default='gentensor',
+                        choices=('gentensor', 'pgentensor'),
+                        help='program to run')
     args = parser.parse_args()
 
     for i, opts in enumerate(OPTIONS):
         opts = dict(opts)
         # Create the directory for Slurm
-        os.makedirs(PROGRAM_OUTPUT_DIR, exist_ok=True)
-        output_tensor = os.path.join(TENSOR_DIR, f'sample-{i}.tns')
-        genten_output = os.path.join(PROGRAM_OUTPUT_DIR, f'genten-output-{i}.out')
+        os.makedirs(args.program_output, exist_ok=True)
+        os.makedirs(args.tensor_dir, exist_ok=True)
+        output_tensor = os.path.join(args.tensor_dir, f'sample-{i}.tns')
+        genten_output = os.path.join(args.program_output,
+                                     f'genten-output-{i}.out')
         with open(os.path.join(args.output, f'batch-{i}.sh'), 'w') as fp:
-            fp.write(genten_batch(opts, output_tensor, genten_output))
+            fp.write(genten_batch(args.version, opts, output_tensor,
+                                  genten_output))

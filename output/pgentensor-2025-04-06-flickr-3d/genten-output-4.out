@@ -1,0 +1,26 @@
+---------------------------------------
+Begin Slurm Prolog: Apr-06-2025 17:31:44
+Job ID:    3567746
+User ID:   jtronge3
+Account:   gts-rvuduc3
+Job name:  batch-4.sh
+Partition: cpu-small
+QOS:       inferno
+---------------------------------------
+==> opts={"dims": [507469, 44690173, 2551256], "density": 7.80441e-12, "fiber_density": 2.81914e-06, "cv_fiber_per_slice": 5.24218, "cv_nnz_per_fiber": 1.04003}
+==> start_time=1743975104
+/var/lib/slurm/slurmd/job3567746/slurm_script: line 8: 2054044 Killed                  ./pgentensor/target/release/pgentensor --fname /storage/home/hcoda1/3/jtronge3/scratch/pgentensor-flickr-3d/sample-4.tns --dims 507469x44690173x2551256 --density 7.80441e-12 --fiber-density 2.81914e-06 --cv-fiber-slice 5.24218 --cv-nonzero-fiber 1.04003
+==> end_time=1743975778
+slurmstepd: error: Detected 1 oom_kill event in StepId=3567746.batch. Some of the step tasks have been OOM Killed.
+---------------------------------------
+Begin Slurm Epilog: Apr-06-2025 17:42:58
+Job ID:        3567746
+User ID:       jtronge3
+Account:       gts-rvuduc3
+Job name:      batch-4.sh
+Resources:     cpu=24,mem=376808M,node=1
+Rsrc Used:     cput=04:30:00,vmem=0,walltime=00:11:15,mem=385849984K,energy_used=0
+Partition:     cpu-small
+QOS:           inferno
+Nodes:         atl1-1-02-004-9-1
+---------------------------------------

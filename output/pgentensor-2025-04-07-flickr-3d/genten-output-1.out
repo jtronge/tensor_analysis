@@ -1,0 +1,24 @@
+---------------------------------------
+Begin Slurm Prolog: Apr-07-2025 16:34:44
+Job ID:    3593569
+User ID:   jtronge3
+Account:   gts-rvuduc3
+Job name:  batch-1.sh
+Partition: cpu-small
+QOS:       inferno
+---------------------------------------
+==> opts={"dims": [253734, 22345086, 1275628], "density": 7.80441e-12, "fiber_density": 2.81914e-06, "cv_fiber_per_slice": 5.24218, "cv_nnz_per_fiber": 1.04003}
+==> start_time=1744058084
+slurmstepd: error: *** JOB 3593569 ON atl1-1-02-010-16-2 CANCELLED AT 2025-04-07T17:35:04 DUE TO TIME LIMIT ***
+---------------------------------------
+Begin Slurm Epilog: Apr-07-2025 17:35:12
+Job ID:        3593569
+User ID:       jtronge3
+Account:       gts-rvuduc3
+Job name:      batch-1.sh
+Resources:     cpu=24,mem=182808M,node=1
+Rsrc Used:     cput=1-00:08:24,vmem=0,walltime=01:00:21,mem=129037996K,energy_used=0
+Partition:     cpu-small
+QOS:           inferno
+Nodes:         atl1-1-02-010-16-2
+---------------------------------------
