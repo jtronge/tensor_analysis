@@ -2,7 +2,7 @@ import json
 from matplotlib import pyplot as plt
 
 
-output_files = [f'output/genten-2025-04-05-flickr-3d/genten-output-{run}.out' for run in range(7)]
+output_files = [f'output/pgentensor-2025-04-07-flickr-3d/genten-output-{run}.out' for run in range(7)]
 
 def process_genten_batch(output_file):
     opts_line_prefix = '==> opts='
@@ -35,6 +35,7 @@ def plot_gentensor_batch(files, title):
         for dim in info['dims']:
             tensor_size *= dim
         requested_nnz_count = info['density'] * tensor_size
+        print(output_file)
         nnz_count.append(f'{int(requested_nnz_count / 10**6)}M')
         times.append(info['walltime'])
         print(nnz_count[-1])
