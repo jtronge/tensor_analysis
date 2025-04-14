@@ -26,3 +26,4 @@ if __name__ == '__main__':
     print('slice_sparsity:', slice_sparsity)
     print('cv (slice):', [info['cv'] for info in data['slices']])
     print('cv_onlynz (fibers):', [info['cv'] for info in data['fibers']])
+    pprint.pprint(data)

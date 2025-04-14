@@ -50,4 +50,4 @@ def plot_gentensor_batch(files, title):
 
 
 if __name__ == '__main__':
-    plot_gentensor_batch(output_files, 'GenTensor tool for flickr-3d-like tensor')
+    plot_gentensor_batch(output_files, 'New GenTensor tool for flickr-3d-like tensor')
